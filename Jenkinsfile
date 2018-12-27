@@ -2,9 +2,9 @@ node {
     def version
     stage('Preparation') {
         checkout scm
-        version = "0.45.1"
+        version = "0.53"
         echo "Building version ${version}"
-        sh 'docker pull debian:jessie'
+        sh 'docker pull node:8-alpine'
     }
     stage('Build') {
         echo "Building version ${version}"
